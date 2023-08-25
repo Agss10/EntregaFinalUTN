@@ -18,7 +18,7 @@ router.post('/', async (req, res, next) => {
 
         var data = await usuariosModels.getUserAndPassword
             (usuario, password);
-            
+
         if (data != undefined) {
             req.session.nombre_usuario = data.nombre;
             req.session.nombre = data.usuario;
@@ -32,8 +32,6 @@ router.post('/', async (req, res, next) => {
     } catch (error) {
         console.log(error)
     }
-}
-
-)
+});
 
 module.exports = router;
