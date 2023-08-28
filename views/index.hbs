@@ -17,7 +17,8 @@
             <h2>Axel Gaston Sequeira</h2>
             <p>Hola! me llamo Axel Gaston Sequeira, soy desarrollador web front-end developer.
                 Realice cursos en Coderhouse,E-learning y EducacionIT. Actualmente estoy en búsqueda de mi primer
-                experiencia laboral en el mundo IT, poder crecer personal y profesionalmente. Mi sueño es convertirme en un
+                experiencia laboral en el mundo IT, poder crecer personal y profesionalmente. Mi sueño es convertirme en
+                un
                 desarrollador experto, capaz de liderar
                 equipos y ayudar a los demás a mejorar y seguir aprendiendo del mundo IT.</p>
         </div>
@@ -83,6 +84,69 @@
         </div>
     </div>
 </div>
+
+<!--NOVEDADES-->
+<div class="row">
+    <div class="col-7">
+        <h3 class="tit-novedades">LISTADO DE NOVEDADES</h3>
+    </div>
+    <div class="col-2 text-right">
+        <button type="button" class="btn btn-success"><a href="#"> <i class="fa fa-plus ">Nuevo</i></a></button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thread-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col" class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each novedades}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>TITULO</td>
+                    <td class="text-right">
+                        <a href="" class="btn btn-sm btn-secondary">
+                            <i class="fa fa-pencil"></i></a>
+                        <a href="" class="btn btn-sm btn-secondary">
+                            <i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                    {{/each}}
+                    
+                   
+                
+               
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--NOVEDADES-->
+<!--MODAL-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria- labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">titulo</h2>
+                <button type="button" class="btn-close" data-bs- dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>subtitulo</h3>
+                <p>cuerpo</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--MODAL-->
+
+
 
 
 

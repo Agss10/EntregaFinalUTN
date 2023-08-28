@@ -14,6 +14,8 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 
 
+
+
 var app = express();
 
 // view engine setup
@@ -74,6 +76,7 @@ app.get('/salir',function(req,res)  {
 app.use('/', indexRouter);
 app.use('/users', usersRouter); 
 app.use('/admin/login', loginRouter);
+
 
 
 //select
