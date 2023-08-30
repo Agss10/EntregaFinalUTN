@@ -1,7 +1,7 @@
 <div class="contanier" style="margin:50px auto">
     <div class="row">
         <div class="col-6 offset-3">
-            <h4 class="tit-mod">Modificar la novedad</h4>
+            <h4 class="tit-mod">MODIFICAR UNA NOVEDAD</h4>
             <form method="post" action="/admin/novedades/modificar">
                 <input type="hidden" value="{{novedad.id}}" name="id">
                 <div class="form-group">
@@ -18,7 +18,7 @@
                     <label for="">Cuerpo</label>
                     <textarea placeholder="Cuerpo" class="form-control" name="cuerpo">{{novedad.cuerpo}}</textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Modificar</button>
+                <button type="submit" class="btn btn-primary modificar">Modificar</button>
             </form>
                 {{#if error}}
                 <p>{{message}}</p>

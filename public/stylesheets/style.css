@@ -6,6 +6,7 @@
   
   body  {
    background-color: black;
+   
     
   }
 
@@ -32,7 +33,7 @@
   /*NAVBAR*/
   .navbar {
     background-color: black;
-    position: fixed;
+    position: top;
     z-index: 2;
     width: 100%;
   }
@@ -124,7 +125,7 @@
     margin-left: 5px;
   }
   .boton:hover  {
-    background-color: red;
+    background-color: grey;
     text-decoration: none;
   }
   /*DESCARGAR CV*/
@@ -181,15 +182,20 @@
   /*SKILLS*/
 
   /*NOVEDADES INDEX*/
+  .tablanovedades  {
+    margin-left: 250px;
+   }
+
   .lista-novedades {
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: x-large;
     text-align: center;
+    margin-top: 20px;
    }
    .lista-novedades li{
-    margin: 10px 0;
+    margin: 15px 0;
    }
    .lista-novedades li a  {
     background-color:white;
@@ -202,7 +208,7 @@
    }
    .lista-novedades li a:hover  {
     color: black;
-    background-color: grey;
+    background-color:grey;
    }
    .title-nov {
     font-family: 'Alfa Slab One' , cursive; 
@@ -229,6 +235,7 @@
   }
   
   /*CARDS*/
+
   
   
   /*FORMULARIO DE CONTACTO*/
@@ -329,74 +336,6 @@
     }
   /*BOTONERA DE REDES S*/
   
-  
-  
-  
-  
-  
-  /*SNACKBAR*/
-   .notificacion  {
-    margin-left: 30px;
-    margin-top: 0px;
-    position: relative;
-    bottom: 3px;
-    right: 3px;
-    height: 400px;
-    width: 200px;
-    border-radius: 6px;
-    background-color: red;
-    color: white;
-    text-shadow: black;
-    box-shadow: 0 1px 10px rgb(red, green, blue);
-    transform: translateY( 30px);
-    opacity: 0;
-    visibility: hidden;
-    animation: fade-in 10s linear ;
-   }
-   .notificacion-body  {
-    font-size: medium;
-    display: block;
-    flex-direction: row;
-    padding: 16px 8px;
-   }
-   .notificacion_progress {
-    position: absolute;
-    left: 4px;
-    bottom: 4px;
-    width: calc(100% - 8px);
-    height: 3px;
-    transform: scaleX(0);
-    transform-origin: left;
-    background: linear-gradient( to right, black, blue);
-    border-radius: inherit;
-    animation: progress 4.5s 0.4s linear;
-   }
-   .hand_icon {
-    height: 130px;
-    width: 130px;
-    margin-right: 4px;
-    margin-left: 4px;
-    margin-top: 10px;
-  
-   }
-    @keyframes fade-in    {
-      5%{ opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-      95% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  
-  @keyframes progress {
-    to  {
-      transform: scaleX(1);
-    }
-  }
-  /*SNACKBAR*/
-  
   /*FOOTER*/
   .footer {
     background-color: black;
@@ -449,10 +388,15 @@
   .titulo-novedades {
     margin-top: 20px;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    margin-left: 465px;
+    
+  }
+  .row-table  {
+    margin-top: 25px;
   }
   .btn-success  {
-    margin-top: 10px;
+    margin-top: 60px;
   }
   .relleno  {
     color: white;
@@ -465,13 +409,39 @@
   }
   /*NOVEDADES HBS*/
 
+
+
   /*MODIFICAR HBS*/
   .form-group  {
-    margin-top: 30px;
+    margin-top: 10px;
   }
-  .tit-mod  {
-    margin-top: 60px;
+  .tit-mod{
     color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    
+  }
+  .modificar {
+    margin-top: 10px;
+    margin-left: 265px;
   }
 
   /*MODIFICAR HBS*/
+
+
+
+  /*AGREGAR HBS*/
+.tit-agregar  {
+  color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group  {
+  margin-top: 10px;
+}
+.guardar  {
+ margin-left: 230px;
+}
+
+
+  /*AGREGAR HBS*/
