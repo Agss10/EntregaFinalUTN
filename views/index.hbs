@@ -61,7 +61,7 @@
     </div> -->
 
 <!--SKILLS-->
-<h2 class="skillstitle" id="skills">Skills</h2>
+<h2 class="skillstitle" id="skills">SKILLS</h2>
 <div class="container d-flex align-items-center justify-content-center">
     <div class="row">
         <div class="col-6">
@@ -86,158 +86,132 @@
 </div>
 
 <!--NOVEDADES-->
-<div class="row">
-    <div class="col-7">
-        <h3 class="tit-novedades">LISTADO DE NOVEDADES</h3>
-    </div>
-    <div class="col-2 text-right">
-        <button type="button" class="btn btn-success"><a href="#"> <i class="fa fa-plus ">Nuevo</i></a></button>
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-        <table class="table">
-            <thead class="thread-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Titulo</th>
-                    <th scope="col" class="text-center">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each novedades}}
-                <tr>
-                    <th scope="row">1</th>
-                    <td>TITULO</td>
-                    <td class="text-right">
-                        <a href="" class="btn btn-sm btn-secondary">
-                            <i class="fa fa-pencil"></i></a>
-                        <a href="" class="btn btn-sm btn-secondary">
-                            <i class="fa fa-trash"></i></a>
-                    </td>
-                </tr>
-                    {{/each}}
-                    
-                   
-                
-               
-            </tbody>
-        </table>
-    </div>
-</div>
+<div class="row my-3">
+    <div id="novedades" class="col-md-5 offset-md-2 py-3">
+        <h2>novedades</h2>
+        <ul class="lista-novedades scroll_section">
+            {{#each novedades}}
 
-<!--NOVEDADES-->
-<!--MODAL-->
+            <li><a href="javascript:void(0)" data-bs-toggle="#modal{{id}}" data-bs-target="ExampleModal">{{titulo}}</a></li>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria- labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel">titulo</h2>
-                <button type="button" class="btn-close" data-bs- dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h3>subtitulo</h3>
-                <p>cuerpo</p>
+            {{/each}}
+        </ul>
+    </div>
+
+    <!--NOVEDADES-->
+
+
+    <!--MODAL-->
+    {{#each novedades}}
+    <div class="modal fade" id="#ExampleModal{{id}}" tabindex="-1" aria- labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">{{titulo}}</h2>
+                    <button type="button" class="btn-close" data-bs- dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>{{subtitulo}}</h3>
+                    <p>{{cuerpo}}</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<!--MODAL-->
+    {{/each}}
 
 
+    <!--MODAL-->
 
 
+    <!--Formulario-->
 
-<!--Formulario-->
+    <section id="contactos" class="container container-contact">
+        <div class="row">
+            <div class="col-12 col-md-6 form-left d-flex align-content-center">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-7 m-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-titlewp">Whats App</h5>
+                                <p class="card-textform">3794096164</p>
+                                <a href="https://wa.link/mat9xp" class="btn btn-primary" target="_blank">Enviar
+                                    Mensaje</a>
 
-<section id="contactos" class="container container-contact">
-    <div class="row">
-        <div class="col-12 col-md-6 form-left d-flex align-content-center">
-            <div class="row d-flex justify-content-center">
-                <div class="col-7 m-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-titlewp">Whats App</h5>
-                            <p class="card-textform">3794096164</p>
-                            <a href="https://wa.link/mat9xp" class="btn btn-primary" target="_blank">Enviar Mensaje</a>
-
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-7 m-4 ">
-                    <div class="card ">
-                        <div class="card-body">
-                            <h5 class="card-titlemail">Correo Electronico</h5>
-                            <p class="card-textform">axel10bbch@gmail.com</p>
-                            <a href="https://mailtrap.io/" class="btn btn-primary" target="_blank">Enviar mail</a>
+                    <div class="col-7 m-4 ">
+                        <div class="card ">
+                            <div class="card-body">
+                                <h5 class="card-titlemail">Correo Electronico</h5>
+                                <p class="card-textform">axel10bbch@gmail.com</p>
+                                <a href="https://mailtrap.io/" class="btn btn-primary" target="_blank">Enviar mail</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-md-6 form-right">
-            <form class="m-4" action="/" method="post">
-                <div class="form-group">
-                    <h2>Contacto</h2>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
-                </div>
-                <div class="form-group">
-                    <textarea class="textarea col-12" class="form-control" rows="7" placeholder="Mensaje" id="mensaje"
-                        name="mensaje"></textarea>
-                </div>
+            <div class="col-12 col-md-6 form-right">
+                <form class="m-4" action="/" method="post">
+                    <div class="form-group">
+                        <h2>CONTACTO</h2>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="textarea col-12" class="form-control" rows="7" placeholder="Mensaje"
+                            id="mensaje" name="mensaje"></textarea>
+                    </div>
 
-                <button type="submit" class="btn btn-primary     col-12">Enviar</button>
-            </form>
-            <p class="message">{{message}}</p>
-        </div>
-    </div>
-
-</section>
-
-
-<!--Formulario-->
-
-<!--BOTONERA REDES S-->
-<section>
-    <div class="fab-container">
-        <div class="fab shadow">
-            <div class="fab-content">
-                <span class="material-icons">support_agent</span>
+                    <button type="submit" class="btn btn-primary     col-12">Enviar</button>
+                </form>
+                <p class="message">{{message}}</p>
             </div>
         </div>
-        <div class="sub-button shadow">
-            <a href="https://wa.link/mat9xp" target="_blank">
-                <span class="fa fa-whatsapp"></span>
-            </a>
-        </div>
-        <div class="sub-button shadow">
-            <a href="https://www.instagram.com/axelsequeiras/" target="_blank">
-                <span class="fa fa-instagram"></span>
-            </a>
-        </div>
-        <div class="sub-button shadow">
-            <a href="https://www.linkedin.com/in/axel-gaston-sequeira-sundberg-65739424a/" target="_blank">
-                <span class="fa fa-linkedin"></span>
-            </a>
-        </div>
-        <div class="sub-button shadow">
-            <a href="https://github.com/Agss10" target="_blank">
-                <span class="fa fa-github"></span>
-            </a>
-        </div>
-    </div>
+
+    </section>
 
 
-</section>
+    <!--Formulario-->
 
-<!--BOTONERA REDES S-->
+    <!--BOTONERA REDES S-->
+    <section>
+        <div class="fab-container">
+            <div class="fab shadow">
+                <div class="fab-content">
+                    <span class="material-icons">support_agent</span>
+                </div>
+            </div>
+            <div class="sub-button shadow">
+                <a href="https://wa.link/mat9xp" target="_blank">
+                    <span class="fa fa-whatsapp"></span>
+                </a>
+            </div>
+            <div class="sub-button shadow">
+                <a href="https://www.instagram.com/axelsequeiras/" target="_blank">
+                    <span class="fa fa-instagram"></span>
+                </a>
+            </div>
+            <div class="sub-button shadow">
+                <a href="https://www.linkedin.com/in/axel-gaston-sequeira-sundberg-65739424a/" target="_blank">
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </div>
+            <div class="sub-button shadow">
+                <a href="https://github.com/Agss10" target="_blank">
+                    <span class="fa fa-github"></span>
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!--BOTONERA REDES S-->

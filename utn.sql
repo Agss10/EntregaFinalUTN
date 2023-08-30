@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 23-08-2023 a las 22:08:31
+-- Tiempo de generación: 30-08-2023 a las 19:37:18
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.26
 
@@ -34,6 +34,30 @@ CREATE TABLE IF NOT EXISTS `contactos` (
   `telefono` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
   `mensaje` varchar(200) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `novedades`
+--
+
+DROP TABLE IF EXISTS `novedades`;
+CREATE TABLE IF NOT EXISTS `novedades` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `subtitulo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `cuerpo` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `novedades`
+--
+
+INSERT INTO `novedades` (`id`, `titulo`, `subtitulo`, `cuerpo`) VALUES
+(2, 'Proyecto BBCH', 'Presentado para el trabajo de Coderhouse', 'Trabajo creado para el club Hercules de Corrientes, donde fue creado con Html y Css'),
+(3, 'Proyecto UTN', 'Proyecto para entrega final del curso UTN', 'Portafolio web creado para la entrega final del curso Utn '),
+(7, 'Trabajo final utn', 'Portafolio web', 'Probando Crud para el recuperatorio de mi entrega final');
 
 -- --------------------------------------------------------
 
